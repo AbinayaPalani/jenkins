@@ -1,5 +1,6 @@
 const puppeteer = require('puppeteer');
 
+jest.setTimeout(60000);
 describe('First test suite', ()=>{
 
     it('launch the browser and load the url', async() =>{
