@@ -3,16 +3,16 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest || exit 0"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "puppeteer": "^4.0.0",
     "puppeteer-core": "^4.0.0"
   },
   "devDependencies": {
-    "jest": "^26.0.1"
+    "jest": "^26.0.1",
+    "puppeteer": "^4.0.0"
   },
   "description": ""
 }
