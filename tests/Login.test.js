@@ -1,5 +1,5 @@
 const timeout = process.env.SLOWMO ? 30000 : 10000;
-jest.setTimeout(timeout);
+jest.setTimeout(50000);
 
 class LoginTest{
     
