@@ -8,7 +8,7 @@ let browser, page;
 describe('Suite for admin tool on jenkins',()=>{
 it('Admin tool ', async () => {
      browser = await puppeteer.launch({
-        headless : truet,
+        headless : true,
         defaultViewport: null,
         devtools: false,
         args:['--start-maximized']
