@@ -1,10 +1,11 @@
 const puppeteer = require('puppeteer');
 const timeout = process.env.SLOWMO ? 30000 : 10000;
-jest.setTimeout(50000);
+
 
 const URL = 'https://staging.access.answerconnect.com';
 
 let browser, page;
+jest.setTimeout(60000);
 describe('Suite for admin tool on jenkins',()=>{
 it('Admin tool ', async () => {
      browser = await puppeteer.launch({
@@ -18,7 +19,7 @@ it('Admin tool ', async () => {
         
         const title = await page.title();
         expect(title).toBe('AnswerConnect');
-        console.log("Title of CWA "+title)
+        console.log("Title of CWA "+title);
         await page.type('input[name="email"]','abinaya.palani@anywhere.co');
         await page.type('input[name="password"]', 'mani1798');
         await page.click('button.button-primary ');
