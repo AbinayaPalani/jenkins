@@ -1,6 +1,4 @@
 const puppeteer = require('puppeteer');
-const timeout = process.env.SLOWMO ? 30000 : 10000;
-
 
 const URL = 'https://staging.access.answerconnect.com';
 
@@ -24,15 +22,14 @@ it('Admin tool ', async () => {
         await page.type('input[name="password"]', 'mani1798');
         await page.click('button.button-primary ');
 
-        await page.waitFor(10000);
+        await page.waitFor(15000);
         await page.waitFor('#fetchAccountInput');
         await page.type('#fetchAccountInput','9223300271');
         await page.click('a#fetch_ac_btn.fetch_ac_btn.search');
         await page.waitFor(5000);
         await page.click('a#fetch_ac_btn.fetch_ac_btn.search');
 
-            
-        await page.waitFor(10000);
+        await page.waitFor(15000);
         await page.click('li#billing');
         await page.waitFor(2000);
         await browser.close();
