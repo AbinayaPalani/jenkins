@@ -6,12 +6,9 @@ const URL = 'https://staging.access.answerconnect.com';
 
 let browser, page;
 
-    
-
-
 beforeAll(async () => {
      browser = await puppeteer.launch({
-        headless : false,
+        headless : true,
         defaultViewport: null,
         devtools: false,
         args:['--start-maximized']
