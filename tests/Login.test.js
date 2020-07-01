@@ -39,7 +39,7 @@ describe('Admin tool feature', () => {
 
 
 
-});
+
     
         it('Place the account in search box ', async () => {
             await page.waitFor(10000);
@@ -57,7 +57,7 @@ describe('Admin tool feature', () => {
             await page.waitFor(2000);
         });
     
-       
+    });
 
     afterAll( async() =>{
         
