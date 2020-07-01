@@ -8,7 +8,7 @@ let browser, page;
 
 beforeAll(async () => {
      browser = await puppeteer.launch({
-        headless : true,
+        headless : truet,
         defaultViewport: null,
         devtools: false,
         args:['--start-maximized']
@@ -18,15 +18,18 @@ beforeAll(async () => {
 
 });
 
-describe('Test title of the page and then login into cwa', () => {
+describe('Admin tool feature', () => {
 
 
     it('Title of the page', async () => {
         
         const title = await page.title();
         expect(title).toBe('AnswerConnect');
+        console.log("Title of CWA "+title)
         
     }, timeout);
+
+
 
     it('Test login into the cwa page', async () =>{
         await page.type('input[name="email"]','abinaya.palani@anywhere.co');
@@ -37,8 +40,6 @@ describe('Test title of the page and then login into cwa', () => {
 
 
 });
-
-    describe('Fetch the account in cwa', () => {
     
         it('Place the account in search box ', async () => {
             await page.waitFor(10000);
@@ -57,8 +58,7 @@ describe('Test title of the page and then login into cwa', () => {
         });
     
        
-    
-    });
+
     afterAll( async() =>{
         
             await browser.close();
